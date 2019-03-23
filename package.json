@@ -1,6 +1,7 @@
 {
   "name": "react-single-site",
   "version": "1.0.0",
+  "homepage": "https://annieshenca.github.io/React-Single-Site",
   "description": "Building personal site",
   "main": "index.js",
   "scripts": {
@@ -9,7 +10,9 @@
     "start": "node ./server/index.js",
     "build": "webpack -p",
     "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon server/index.js"
+    "server-dev": "nodemon server/index.js",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -20,7 +23,6 @@
   "bugs": {
     "url": "https://github.com/annieshenca/React-Single-Site/issues"
   },
-  "homepage": "https://github.com/annieshenca/React-Single-Site#readme",
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
@@ -29,6 +31,7 @@
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-router": "^5.0.0",
